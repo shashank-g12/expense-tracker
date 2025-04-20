@@ -16,28 +16,18 @@ This is a simple personal finance tracker application built with Python. It allo
 
 ## Installation
 
-1. Fork the Repository:
-
-Click the `Fork` button at the top right corner to create a copy of the repository in your GitHub account.
-
-2. Clone Your Forked Repository:
+1. Clone the repository:
 
 Replace your-username with your GitHub username in the following command:
 
 ```bash
-git clone https://github.com/your-username/personal-finance-tracker.git
+git clone https://github.com/shashank-g12/expense-tracker.git
 ```
 
-3. Navigate to the Project Directory:
+2. Navigate to the Project Directory:
 
 ```bash
-cd personal-finance-tracker
-```
-
-4. Install the required dependencies:
-
-```python
-pip install -r requirements.txt
+cd expense-tracker
 ```
 
 ## Usage
