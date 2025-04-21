@@ -1,9 +1,9 @@
 import csv
 from report import generate_report
 
-def export_report_to_csv(db, currency_symbol, filename='financial_report.csv'):
-    # Pass both db and currency_symbol to generate_report
-    transactions, total_income, total_expenses, net_savings, category_expenses = generate_report(db, currency_symbol, return_data=True)
+def export_report_to_csv(db, currency_symbol, user_id, filename='financial_report.csv'):
+    # Pass db, currency_symbol, and user_id to generate_report
+    transactions, total_income, total_expenses, net_savings, category_expenses = generate_report(db, currency_symbol, user_id, return_data=True)
 
     with open(filename, 'w', newline='') as csvfile:
         fieldnames = ['Date', 'Type', 'Amount', 'Category', 'Description']

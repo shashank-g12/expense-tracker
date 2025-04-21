@@ -1,7 +1,7 @@
 from collections import defaultdict
 
-def generate_report(db, currency_symbol, return_data=False):
-    transactions = db.get_all_transactions()
+def generate_report(db, currency_symbol, user_id, return_data=False):
+    transactions = db.get_all_transactions(user_id)
     
     total_income = sum(t.amount for t in transactions if t.type == 'income')
     total_expenses = sum(t.amount for t in transactions if t.type == 'expense')
