@@ -1,6 +1,6 @@
-# Personal Finance Tracker
+# FinWise
 
-This is a simple personal finance tracker application built with Python. It allows users to track their income and expenses, manage budgets, receive alerts, view transactions, and generate detailed financial reports.
+FinWise is a simple personal finance tracker application built with Python. It allows users to track their income and expenses, manage budgets, receive alerts, view transactions, and generate detailed financial reports.
 
 ## Features
 

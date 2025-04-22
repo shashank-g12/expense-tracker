@@ -12,14 +12,14 @@ from export import export_report_to_csv
 
 
 def login_menu():
-    print("\nPersonal Finance Tracker")
+    print("\nFinWise")
     print("1. Login")
     print("2. Sign Up")
     print("3. Exit")
     return input("Choose an option: ")
 
 def main_menu():
-    print("\nPersonal Finance Tracker")
+    print("\nFinWise")
     print("1. Add Transaction")
     print("2. View Transactions")
     print("3. Generate Report")
@@ -101,7 +101,7 @@ def manage_budget(budget, currency_symbol):
         else:
             print("Invalid choice. Please try again.")        
 
-def main():
+def cli_main():
     db = Database()
     current_user = None
     
@@ -113,7 +113,7 @@ def main():
             elif choice == '2':
                 signup(db)
             elif choice == '3':
-                print("Thank you for using Personal Finance Tracker!")
+                print("Thank you for using FinWise!")
                 sys.exit(0)
             else:
                 print("Invalid choice. Please try again.")
@@ -149,6 +149,24 @@ def main():
                     break
                 else:
                     print("Invalid choice. Please try again.")
+
+def gui_main():
+    # Import here to avoid circular imports
+    from app.gui import start_gui
+    start_gui()
+
+def main():
+    # Check for command line arguments
+    if len(sys.argv) > 1 and sys.argv[1].lower() == '--cli':
+        cli_main()
+    else:
+        # Default to GUI mode
+        try:
+            gui_main()
+        except Exception as e:
+            print(f"Error starting GUI: {e}")
+            print("Falling back to CLI mode...")
+            cli_main()
 
 if __name__ == "__main__":
     main()
