@@ -13,6 +13,8 @@ FinWise is a simple personal finance tracker application built with Python. It a
 - **Financial Reports:** Generate comprehensive financial reports and export them to CSV for further analysis.
 
 - **SQLite Database:** Securely store all financial data using SQLite.
+  
+- **Graphical User Interface (GUI):** Built using Python's Tkinter library for a user-friendly and interactive interface.
 
 ## Installation
 
